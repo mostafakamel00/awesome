@@ -1,0 +1,123 @@
+@media screen and (max-width: 1199px) {
+  nav .container .content-nav .nav-links {
+    width: 70%;
+  }
+  .features .parent-features .box .img-holder::after {
+    border-width: 0px 0px 100px 479px;
+  }
+  .features .parent-features .box:hover .img-holder::after {
+    border-width: 100px 473px 121px 0px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  nav .container .content-nav .nav-links {
+    width: 70%;
+  }
+  .gallery {
+    margin-top: 8rem;
+  }
+  .features .parent-features .box .img-holder::after {
+    border-width: 0px 0px 100px 479px;
+  }
+  .features .parent-features .box:hover .img-holder::after {
+    border-width: 100px 473px 121px 0px;
+  }
+}
+/*========================== start meduim screen================================*/
+@media screen and (max-width: 991px) {
+  body {
+    overflow-x: hidden;
+  }
+  /*==========================start landing================================*/
+  .landing .content-landing {
+    flex-direction: column-reverse;
+  }
+  .landing .content-landing .text {
+    padding-top: 2rem;
+  }
+  .landing .content-landing .text h2,
+  p {
+    text-align: center;
+  }
+  .landing .content-landing .image img {
+    animation: unset;
+  }
+  .landing a {
+    bottom: 10px;
+  }
+  /*==========================end landing================================*/
+  /****************************Start Gallery*****************************/
+  .gallery {
+    margin-top: 8rem;
+  }
+  /******************************End Gallery********************************/
+  /******************************Start Our Skills*****************************/
+  .our-skills .image img {
+    display: none;
+  }
+  /******************************End Our Skills******************************/
+}
+/*==========================end meduim screen================================*/
+/*==========================start small screen================================*/
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  /*************************start navbar***********************/
+
+  nav .container .content-nav .nav-links {
+    position: absolute;
+    right: 0;
+    top: 8vh;
+    height: 92vh;
+    width: 100%;
+    background-color: darkslategrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+  }
+  nav .container .content-nav .nav-links li {
+    opacity: 0;
+  }
+  nav .container .content-nav .nav-links li a {
+    color: white;
+  }
+  nav .container .content-nav .icon {
+    display: block;
+    cursor: pointer;
+  }
+  nav .container .content-nav .nav-active {
+    transform: translateX(0);
+  }
+  .landing {
+    z-index: -1;
+  }
+  /*********************************end navbar *************************/
+  /*********************************Start Gallery**********************/
+  .gallery {
+    margin-top: 5rem;
+  }
+  /*******************************End Gallery**************************/
+
+  /******************************Start Features***********************/
+  .features .parent-features .box .img-holder::after {
+    border-width: 0px 0px 100px 540px;
+  }
+  .features .parent-features .box:hover .img-holder::after {
+    border-width: 170px 553px 100px 0px;
+  }
+  /******************************End Features************************/
+}
+@media screen and (max-width: 660px) {
+  .gallery {
+    margin-top: 4rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .gallery {
+    margin-top: 0;
+  }
+}
+/*==========================end small screen================================*/
