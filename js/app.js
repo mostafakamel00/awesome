@@ -105,3 +105,28 @@ show.onclick = function () {
   });
 };
 /////End Scroll to top
+
+///Start Counter By JS
+
+const countDown = () => {
+  const countDate = new Date("jan 28, 2022 13:00:00").getTime();
+  const now = new Date().getTime();
+  const gap = countDate - now;
+
+  //my Time
+  const second = 1000,
+    minute = second * 60,
+    hour = minute * 60,
+    day = hour * 24;
+
+  ///my Text
+  const textDay = Math.floor(gap / day),
+    textHour = Math.floor((gap % day) / hour),
+    textMinute = Math.floor((gap % hour) / minute),
+    textSecond = Math.floor((gap % minute) / second);
+  document.querySelector(".unite .day").innerHTML = textDay;
+  document.querySelector(".unite .hours").innerHTML = textHour;
+  document.querySelector(".unite .minutes").innerHTML = textMinute;
+  document.querySelector(".unite .seconds").innerHTML = textSecond;
+};
+setInterval(countDown, 1000);

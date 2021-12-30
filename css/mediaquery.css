@@ -1,3 +1,10 @@
+@media screen and (max-width: 1300px) {
+  /* .event .parent-event {
+    transform: translateY(60px);
+    padding: 35px 0;
+  } */
+}
+
 @media screen and (max-width: 1199px) {
   nav .container .content-nav .nav-links {
     width: 70%;
@@ -8,6 +15,9 @@
   .features .parent-features .box:hover .img-holder::after {
     border-width: 100px 473px 121px 0px;
   }
+  /* .event .parent-event {
+    padding: 65px 0;
+  } */
 }
 @media screen and (max-width: 1024px) {
   nav .container .content-nav .nav-links {
@@ -22,6 +32,13 @@
   .features .parent-features .box:hover .img-holder::after {
     border-width: 100px 473px 121px 0px;
   }
+
+  /* .event .parent-event {
+    transform: translateY(105px);
+  }
+  .event .subscribe input:first-child {
+    margin: 12px auto;
+  } */
 }
 /*========================== start meduim screen================================*/
 @media screen and (max-width: 991px) {
@@ -56,8 +73,45 @@
     display: none;
   }
   /******************************End Our Skills******************************/
+  /******************************Start Our Work******************************/
+  .our-work .parent-work {
+    display: block;
+  }
+  .our-work .parent-work img {
+    display: block;
+    margin: 20px auto;
+    width: 250px;
+  }
+  .our-work .parent-work .info .box {
+    margin: 15px auto;
+  }
+  /*********************Start Events***************/
+  /* .event .main-title {
+    margin: 0px auto 0px;
+  } */
+
+  .event .img-up,
+  .event .img-down {
+    display: none;
+  }
+  .event .container .parent-event {
+    display: block;
+  }
+  .event .container .parent-event img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+  }
+  .event .container .subscribe {
+    width: 100%;
+    transform: unset;
+  }
+  .video .parent-video {
+    flex-direction: column;
+  }
 }
 /*==========================end meduim screen================================*/
+
 /*==========================start small screen================================*/
 @media screen and (max-width: 768px) {
   body {
@@ -109,6 +163,10 @@
     border-width: 170px 553px 100px 0px;
   }
   /******************************End Features************************/
+  .price .parent-price .box:first-child,
+  .price .parent-price .box:last-child {
+    transform: translateX(0);
+  }
 }
 @media screen and (max-width: 660px) {
   .gallery {
