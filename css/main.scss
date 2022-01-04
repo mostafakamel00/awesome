@@ -15,9 +15,7 @@ a {
 ul {
   list-style: none !important;
 }
-body {
-  height: 12000px;
-}
+
 $maincol: #2196f3;
 $seccol: #2b74af;
 $pcol: #777;
@@ -31,6 +29,7 @@ $paddingsec: 60px 0 80px 0;
 nav {
   box-shadow: 0 6px 5px #ddd;
   padding: 10px 0;
+  background-color: $background;
   .container {
     .content-nav {
       display: flex;
@@ -38,14 +37,9 @@ nav {
       align-items: center;
       padding-top: 15px;
       .logo {
-        h4 {
-          font-family: "Poppins", sans-serif;
-          font-size: 22px;
-          font-weight: bold;
-          text-transform: uppercase;
-          letter-spacing: 4px;
-          color: $maincol;
-          filter: drop-shadow(2px 2px 5px $maincol);
+        img {
+          width: 49px;
+          max-width: 100%;
         }
       }
       .nav-links {
@@ -70,7 +64,7 @@ nav {
       .icon {
         display: none;
         i {
-          color: darkslategrey;
+          color: #0dcaf0;
           font-size: 25px;
           transition: all 1s ease-in-out;
           &:hover {
@@ -109,7 +103,7 @@ nav {
     .text {
       flex: 1;
       h2 {
-        color: $seccol;
+        color: $seccol !important;
         font-weight: bold;
         letter-spacing: 3px;
       }
@@ -1038,9 +1032,9 @@ nav {
   }
   .parent-stat {
     position: relative;
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
     .box {
       background: white;
       padding: 50px 90px;
@@ -1086,6 +1080,212 @@ nav {
   }
 }
 ///////////////////////////////////////ُEnd Statistics
+///////////////////////////////////////ُEnd Discount
+.discount {
+  display: flex;
+  min-height: 100vh;
+  .image {
+    background-image: url("../images/discount-background1.jpg");
+    background-size: cover;
+    position: relative;
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #2b74affc;
+      z-index: -1;
+    }
+    .content {
+      text-align: center;
+      h3,
+      p {
+        color: white;
+        font-weight: bold;
+        font-style: italic;
+      }
+      h3 {
+        font-size: 60px;
+        margin: 60px 0;
+        font-family: "Font Awesome 5 Free";
+        letter-spacing: 10px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.7;
+        font-family: cursive;
+        letter-spacing: 2px;
+        margin: 0 50px;
+      }
+      img {
+        width: 300px;
+        max-width: 100%;
+      }
+    }
+  }
+  .discount-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    .content-form {
+      text-align: center;
+      h4 {
+        font-size: 40px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin: 20px 0;
+      }
+      form {
+        input {
+          display: block;
+          width: 100%;
+          margin: 20px 0;
+          outline: none;
+          border: none;
+          border-bottom: 1px solid #ccc;
+          padding: 7px 10px;
+          background: #f6f6f6;
+        }
+        textarea {
+          resize: none;
+          height: 200px;
+          border: none;
+          width: 100%;
+          background: #f6f6f6;
+          padding: 7px 10px;
+        }
+        button {
+          margin-top: 20px;
+          width: 100%;
+          padding: 13px;
+          outline: none;
+          border: none;
+          background-color: $seccol;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          font-family: "Poppins";
+          letter-spacing: 2px;
+          transition: $transition;
+          &:hover {
+            background-color: #2a5b83;
+          }
+        }
+      }
+    }
+  }
+}
+///////////////////////////////////////ُEnd Discount
+///////////////////////////////////////ُStart Footer
+.footer {
+  background-color: #191919;
+  padding: 60px 0 25px 0;
+
+  color: white;
+  .parent-footer {
+    @extend %col-4;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important;
+    .box {
+      .social {
+        h3 {
+          font-size: 50px;
+          letter-spacing: 5px;
+          font-family: cursive;
+        }
+        ul {
+          display: flex;
+          align-items: center;
+          gap: 17px;
+          li {
+            a {
+              i {
+                font-size: 40px;
+                color: #b9b9b9;
+              }
+            }
+          }
+        }
+        p {
+        }
+      }
+      .links {
+        li {
+          border-bottom: 1px solid #f9f9f9;
+          padding: 10px 0;
+          cursor: pointer;
+          transition: $transition;
+          i {
+            color: $seccol;
+            padding-right: 10px;
+          }
+          &:hover {
+            margin-left: 10px;
+          }
+        }
+      }
+      .location {
+        display: flex;
+        align-items: center;
+        i {
+        }
+        .info {
+          padding-left: 15px;
+
+          h6 {
+          }
+          p {
+            margin-bottom: 0;
+          }
+        }
+        .contact {
+          i {
+          }
+          .info {
+          }
+        }
+      }
+      img {
+        width: 78px;
+        margin: 0 10px 10px 0;
+      }
+      &:nth-child(3) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .location {
+          i {
+            padding-left: 10px;
+            color: $seccol;
+          }
+        }
+        .contact {
+          display: flex;
+          align-items: center;
+          i {
+            padding-right: 5px;
+            color: $seccol;
+          }
+        }
+      }
+    }
+  }
+  .date {
+    text-align: center;
+    margin-top: 5rem;
+    span {
+      #date {
+        letter-spacing: 3px;
+      }
+    }
+  }
+}
+///////////////////////////////////////ُEnd Footer
 
 /********************************global classes*******************************/
 .main-title {
@@ -1150,7 +1350,7 @@ nav {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 40px;
 }
-.up {
+.to-up {
   position: fixed;
   right: -40px;
   bottom: 30px;
@@ -1164,6 +1364,17 @@ nav {
 .show {
   right: 15px;
 }
+////class for navbar
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #334257;
+  box-shadow: unset;
+  z-index: 15;
+}
+
 /*******************************animations*******************************/
 
 //////////////////////////animation to use with javascript to create smooth navbar
@@ -1248,3 +1459,41 @@ nav {
   }
 }
 /*******************************animations*******************************/
+
+.language {
+  ul {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    li {
+      p {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        gap: 10px;
+        font-size: 12px;
+      }
+      .ar {
+        &::after {
+          content: "";
+          display: block;
+          width: 12px;
+          height: 12px;
+          background-image: url("../images//countries/palestina-flag-jpg-xl.jpg");
+          background-size: cover;
+        }
+      }
+      .en {
+        &::after {
+          transition: all 3s ease-in-out;
+          content: "";
+          display: block;
+          width: 12px;
+          height: 12px;
+          background-image: url("../images//countries/united-states-of-america-flag-png-large.png");
+          background-size: cover;
+        }
+      }
+    }
+  }
+}

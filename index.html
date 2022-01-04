@@ -32,11 +32,15 @@
   </head>
   <body>
     <!--Start NavBar-->
-    <nav>
+    <nav id="nav">
       <div class="container">
         <div class="content-nav">
           <div class="logo">
-            <h4>Awesome</h4>
+            <img
+              src="./images/logo/5a2e53344f5f69.7969728115129853963251.png"
+              alt=""
+            />
+            <p></p>
           </div>
           <ul class="nav-links">
             <li><a href="#articles">Articles</a></li>
@@ -54,10 +58,16 @@
     <!--Start landing-->
     <div class="landing">
       <div class="container">
+        <div class="language">
+          <ul>
+            <li><p class="ar" id="ar">Arabic</p></li>
+            <li><p class="en" id="en">English</p></li>
+          </ul>
+        </div>
         <div class="content-landing">
           <div class="text">
-            <h2>Welcome, To landing page</h2>
-            <p>
+            <h2 id="title" data-reload>Welcome, To landing page</h2>
+            <p id="par">
               Here Iam gonna share everything about my life. Books Iam reading,
               Games Iam Playing, Stories and Events
             </p>
@@ -75,7 +85,7 @@
     <!--Start articles-->
     <div class="articels" id="articles">
       <div class="container">
-        <h2 class="main-title">Articles</h2>
+        <h2 id="article" class="main-title">Articles</h2>
         <div class="parent-boxs"></div>
       </div>
     </div>
@@ -91,7 +101,7 @@
         ></path>
       </svg>
       <div class="container">
-        <h2 class="main-title">Gallery</h2>
+        <h2 class="main-title gallery-lang">Gallery</h2>
         <div class="parent-gallery">
           <div class="box">
             <div class="image">
@@ -130,13 +140,13 @@
     <!--Start Features-->
     <div class="features" id="features">
       <div class="container">
-        <h2 class="main-title">Features</h2>
+        <h2 class="main-title features-lang">Features</h2>
         <div class="parent-features">
           <div class="box time">
             <div class="img-holder">
               <img src="./images/features/features-01.jpg" alt="" />
             </div>
-            <h2 class="feat-head">Time</h2>
+            <h2 class="feat-head" id="time">Time</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Necessitatibus, inventore?
@@ -147,7 +157,7 @@
             <div class="img-holder">
               <img src="./images/features/features-02.jpg" alt="" />
             </div>
-            <h2 class="feat-head">Passion</h2>
+            <h2 class="feat-head" id="passion">Passion</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Necessitatibus, inventore?
@@ -158,7 +168,7 @@
             <div class="img-holder">
               <img src="./images/features/features-03.jpg" alt="" />
             </div>
-            <h2 class="feat-head">Quality</h2>
+            <h2 class="feat-head" id="quality">Quality</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Necessitatibus, inventore?
@@ -172,7 +182,7 @@
     <!--Start testimonial-->
     <div class="testimonial">
       <div class="container">
-        <h2 class="main-title">Testimonials</h2>
+        <h2 class="main-title testimonial-lang">Testimonials</h2>
         <div class="parent-testimonial">
           <div class="box">
             <img src="./images/testimonial/avatar-01.png" alt="" />
@@ -283,7 +293,7 @@
     <!--Start Team Member-->
     <div class="team">
       <div class="container">
-        <h2 class="main-title">Team member</h2>
+        <h2 class="main-title team-lang">Team member</h2>
         <div class="parent-team">
           <div class="box">
             <div class="data">
@@ -452,7 +462,7 @@
     <!--Start services-->
     <div class="service">
       <div class="container">
-        <h2 class="main-title">Services</h2>
+        <h2 class="main-title service-lang">Services</h2>
         <div class="parent-service">
           <div class="box">
             <i class="fas fa-user-shield fa-5x"></i>
@@ -503,7 +513,7 @@
     <!--Start skills-->
     <div class="our-skills">
       <div class="container">
-        <h2 class="main-title">Our Skills</h2>
+        <h2 class="main-title skill-lang">Our Skills</h2>
         <div class="parent-skills">
           <div class="image">
             <img src="./images/skills.png" alt="" />
@@ -547,7 +557,7 @@
     <!--Start Our-Work-->
     <div class="our-work">
       <div class="container">
-        <h2 class="main-title">Our Work</h2>
+        <h2 class="main-title work-lang">Our Work</h2>
         <div class="parent-work">
           <img src="images/work/work-steps.png" alt="" />
           <div class="info">
@@ -601,7 +611,7 @@
     <!--Start Latest Event-->
     <div class="event">
       <div class="container">
-        <h2 class="main-title">Latest Event</h2>
+        <h2 class="main-title event-lang">Latest Event</h2>
         <div class="img-up"></div>
         <div class="img-down"></div>
         <div class="parent-event">
@@ -645,7 +655,7 @@
     <!--Start Price-->
     <div class="price">
       <div class="container">
-        <h2 class="main-title">PRICING PLANS</h2>
+        <h2 class="main-title price-lang">PRICING PLANS</h2>
 
         <div class="parent-price">
           <div class="box">
@@ -705,7 +715,7 @@
     <!--Start video-->
     <div class="video">
       <div class="container">
-        <h2 class="main-title">TOP VIDEOS</h2>
+        <h2 class="main-title video-lang">TOP VIDEOS</h2>
         <div class="parent-video">
           <div class="list">
             <div class="head">
@@ -754,33 +764,151 @@
     <!--Start Statistics -->
     <div class="stat">
       <div class="container">
-        <h2>Our Awesome Stats</h2>
+        <h2 class="stat-lang">Our Stats</h2>
         <div class="parent-stat">
           <div class="box">
             <i class="fas fa-users"></i>
-            <p>150</p>
+            <p class="number" data-count="150">00</p>
             <p>Clients</p>
           </div>
           <div class="box">
             <i class="fas fa-greater-than-equal"></i>
-            <p>130</p>
+            <p class="number" data-count="130">00</p>
             <p>Projects</p>
           </div>
           <div class="box">
             <i class="fas fa-globe-africa"></i>
-            <p>60</p>
+            <p class="number" data-count="60">00</p>
             <p>Countries</p>
           </div>
           <div class="box">
             <i class="far fa-money-bill-alt"></i>
-            <p>350</p>
+            <p class="number" data-count="350">00</p>
             <p>Moneys</p>
           </div>
         </div>
       </div>
     </div>
     <!--End Statistics -->
-    <i class="fas fa-chevron-up fa-2x up"></i>
+    <!--Start Discount-->
+    <div class="discount">
+      <div class="image">
+        <div class="content">
+          <h3 class="discount-lang">We Have A Discounts</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi
+            voluptatum atque explicabo doloremque culpa corporis eos recusandae.
+            Praesentium quae omnis cupiditate rem voluptas corporis cum unde,
+            neque quam ratione quis possimus iste exercitationem? Adipisci iusto
+            illo dicta, eligendi facere itaque!
+          </p>
+          <img src="./images/discount.png" alt="" />
+        </div>
+      </div>
+      <div class="discount-form">
+        <div class="content-form">
+          <h4 id="discount-form">Request A Discount</h4>
+          <form>
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="E-mail" />
+            <input type="text" placeholder="Phone" />
+            <textarea placeholder="Tell Us About Your Needs"></textarea>
+            <button>Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--End Discount-->
+    <!--Start Foooter-->
+    <div class="footer">
+      <div class="container">
+        <div class="parent-footer">
+          <div class="box">
+            <div class="social">
+              <h3>ELZERO</h3>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/mostafa-kamel0/"
+                    target="_blank"
+                  >
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.facebook.com/m.kamel1123/"
+                    target="_blank"
+                  >
+                    <i class="fab fa-facebook-square"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="" target="_blank">
+                    <i class="fab fa-twitter-square"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/mos_tafa1123/"
+                    target="_blank"
+                  >
+                    <i class="fab fa-instagram-square"></i>
+                  </a>
+                </li>
+              </ul>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
+                ipsa? Enim cupiditate itaque nemo doloribus numquam, ipsam
+                aperiam qui blanditiis?
+              </p>
+            </div>
+          </div>
+          <div class="box">
+            <ul class="links">
+              <li>
+                <i class="fas fa-angle-double-right"></i>
+                Some Link
+              </li>
+              <li><i class="fas fa-angle-double-right"></i>Some Link</li>
+              <li><i class="fas fa-angle-double-right"></i>Some Link</li>
+              <li><i class="fas fa-angle-double-right"></i>Some Link</li>
+              <li><i class="fas fa-angle-double-right"></i>Some Link</li>
+            </ul>
+          </div>
+          <div class="box">
+            <div class="contact">
+              <i class="fas fa-phone-alt"></i>
+              <div class="info">01061925619</div>
+            </div>
+            <div class="location">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="info">
+                <h6>Egypt, Menofia</h6>
+                <p>Tala</p>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <img src="./images/gallery/gallery-01.png" alt="" />
+            <img src="./images/gallery/gallery-02.png" alt="" />
+            <img src="./images/gallery/gallery-03.jpg" alt="" />
+            <img src="./images/gallery/gallery-04.png" alt="" />
+            <img src="./images/gallery/gallery-05.jpg" alt="" />
+            <img src="./images/gallery/gallery-06.png" alt="" />
+          </div>
+        </div>
+        <div class="date">
+          <span
+            >All Rights Reserved
+            <span id="date"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <!--End Foooter-->
+    <i class="fas fa-chevron-up fa-2x up to-up"></i>
     <script src="js/app.js"></script>
+    <script src="js/lang.js"></script>
   </body>
 </html>

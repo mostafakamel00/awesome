@@ -86,9 +86,6 @@
     margin: 15px auto;
   }
   /*********************Start Events***************/
-  /* .event .main-title {
-    margin: 0px auto 0px;
-  } */
 
   .event .img-up,
   .event .img-down {
@@ -109,6 +106,21 @@
   .video .parent-video {
     flex-direction: column;
   }
+  .discount {
+    display: block;
+  }
+  .discount .discount-form {
+    display: block;
+  }
+  .discount .discount-form .content-form form input {
+    width: 80%;
+  }
+  .discount .discount-form .content-form form textarea {
+    width: 55%;
+  }
+  .discount .discount-form .content-form form button {
+    width: 50%;
+  }
 }
 /*==========================end meduim screen================================*/
 
@@ -117,12 +129,13 @@
   body {
     overflow-x: hidden;
   }
+
   /*************************start navbar***********************/
 
   nav .container .content-nav .nav-links {
     position: absolute;
     right: 0;
-    top: 8vh;
+    top: 14vh;
     height: 92vh;
     width: 100%;
     background-color: darkslategrey;

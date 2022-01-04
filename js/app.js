@@ -89,17 +89,17 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 /////Start Scroll to top
-const show = document.querySelector(".up");
-window.onscroll = function () {
-  // console.log(scrollY);
-  if (scrollY >= 2200) {
+let show = document.querySelector(".to-up");
+window.addEventListener("scroll", function () {
+  const scrollHei = window.pageYOffset;
+  if (scrollHei > 2000) {
     show.classList.add("show");
   } else {
     show.classList.remove("show");
   }
-};
-show.onclick = function () {
-  window.scrollTo({
+});
+show.onclick = () => {
+  scrollTo({
     top: 0,
     behavior: "smooth",
   });
@@ -109,7 +109,7 @@ show.onclick = function () {
 ///Start Counter By JS
 
 const countDown = () => {
-  const countDate = new Date("jan 28, 2022 13:00:00").getTime();
+  const countDate = new Date("jan 25, 2022 13:00:00").getTime();
   const now = new Date().getTime();
   const gap = countDate - now;
 
@@ -130,3 +130,46 @@ const countDown = () => {
   document.querySelector(".unite .seconds").innerHTML = textSecond;
 };
 setInterval(countDown, 1000);
+
+///////Start Counter
+
+const number = document.querySelectorAll(".stat .parent-stat .number");
+const section = document.querySelector(".stat");
+let started = false;
+
+window.onscroll = function () {
+  // console.log(scrollY);
+  if (window.scrollY >= section.offsetTop) {
+    if (!started) {
+      number.forEach((num) => {
+        startCount(num);
+      });
+    }
+    started = true;
+  }
+};
+
+function startCount(el) {
+  let count = el.dataset.count;
+  let interval = setInterval(() => {
+    el.textContent++;
+    if (el.textContent == count) {
+      clearInterval(interval);
+    }
+  }, 2000 / count);
+}
+const date = document.getElementById("date");
+date.textContent = new Date().getFullYear();
+///////////////////////////fixed navbar
+const nav = document.getElementById("nav");
+const navLink = document.querySelectorAll("#nav .content-nav .nav-links li a");
+
+window.addEventListener("scroll", function () {
+  const scrollHeight = window.pageYOffset;
+
+  if (scrollHeight > 400) {
+    nav.classList.add("fixed-nav");
+  } else {
+    nav.classList.remove("fixed-nav");
+  }
+});
